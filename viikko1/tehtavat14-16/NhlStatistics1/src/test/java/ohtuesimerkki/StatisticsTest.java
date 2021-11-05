@@ -44,19 +44,17 @@ public class StatisticsTest {
     public void correctTeam() {
         List<Player> team = stats.team("PIT");
         List<Player> testTeam = new ArrayList<>();
-        testTeam.add(new Player("Lemieux", "PIT", 45,54));
-        assertEquals(testTeam, team);
+        List<Player> testTeam2 = new ArrayList<>();
+        testTeam.add(new Player("Lemieux", "PIT",45,54));
+        testTeam2.add(new Player("Lemieux", "PIT",45,54));
+        //Assert.assertArrayEquals(testTeam.toArray(), team.toArray());
+        assertEquals(testTeam.get(0).getTeam(), team.get(0).getTeam());
     }
 
     @Test
     public void correctTopScorers() {
         List<Player> best = stats.topScorers(1);
         assertEquals("Gretzky", best.get(0).getName());
-    }
-
-    @Test
-    public void asd() {
-
     }
 }
 

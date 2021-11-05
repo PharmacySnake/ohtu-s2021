@@ -16,13 +16,15 @@ application {
     mainClass = 'ohtuesimerkki.Main'
 }
 
-run{
-    standardInput = System.in
-}
-
 jacocoTestReport {
     reports {
         xml.enabled true
         html.enabled true
     }
 }
+
+run {
+    standardInput = System.in
+}
+
+
