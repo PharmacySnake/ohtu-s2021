@@ -1,7 +1,12 @@
 package ohtu.verkkokauppa;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Kauppa {
 
+    @Autowired
     private VarastoInterface varasto;
     private PankkiInterface pankki;
     private Ostoskori ostoskori;
@@ -20,7 +25,8 @@ public class Kauppa {
     }
 
     public void poistaKorista(int id) {
-        Tuote t = varasto.haeTuote(id); 
+        Tuote t = varasto.haeTuote(id);
+        ostoskori.poista(t);
         varasto.palautaVarastoon(t);
     }
 
