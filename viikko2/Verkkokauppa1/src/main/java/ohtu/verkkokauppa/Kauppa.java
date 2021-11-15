@@ -8,10 +8,10 @@ public class Kauppa {
     private ViitegeneraattoriInterface viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa(VarastoInterface v, PankkiInterface p, ViitegeneraattoriInterface vg) {
-        varasto = v;
-        pankki = p;
-        viitegeneraattori = vg;
+    public Kauppa(VarastoInterface varasto, PankkiInterface pankki, ViitegeneraattoriInterface viitegeneraattori) {
+        this.varasto = varasto;
+        this.pankki = pankki;
+        this.viitegeneraattori = viitegeneraattori;
         kaupanTili = "33333-44455";
     }
 
