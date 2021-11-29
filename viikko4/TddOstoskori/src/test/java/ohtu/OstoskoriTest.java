@@ -8,10 +8,13 @@ import static org.junit.Assert.*;
 public class OstoskoriTest {
 
     Ostoskori kori;
+    Tuote maito = new Tuote("maito", 3);
+    Tuote mehu = new Tuote("maito", 2);
 
     @Before
     public void setUp() {
         kori = new Ostoskori();
+
     }
 
     // step 1
@@ -24,8 +27,6 @@ public class OstoskoriTest {
 
     @Test
     public void yhdenTuotteenLisaamisenJalkeenKorissaYksiTuote() {
-        Tuote maito = new Tuote("maito", 3);
-
         kori.lisaaTuote(maito);
 
         assertEquals(1, kori.tavaroitaKorissa());
@@ -33,8 +34,6 @@ public class OstoskoriTest {
 
     @Test
     public void yhdenTuotteenLisaamisenJalkeenHintaOnSamaKuinTuotteenHinta() {
-        Tuote maito = new Tuote("maito", 3);
-
         kori.lisaaTuote(maito);
 
         assertEquals(maito.getHinta(), kori.hinta());
@@ -42,9 +41,6 @@ public class OstoskoriTest {
 
     @Test
     public void kahdenEriTuotteenLisaamisenJalkeenKorissaKaksiTuotetta() {
-        Tuote maito = new Tuote("maito", 3);
-        Tuote mehu = new Tuote("maito", 2);
-
         kori.lisaaTuote(maito);
         kori.lisaaTuote(mehu);
 
@@ -52,11 +48,17 @@ public class OstoskoriTest {
     }
 
     public void kahdenTuotteenLisaamisenJalkeenHintaOnSamaKuinKahdenTuotteenHintaYhteensa() {
-        Tuote maito = new Tuote("maito", 3);
-
         kori.lisaaTuote(maito);
         kori.lisaaTuote(maito);
 
         assertEquals((maito.getHinta()*2), kori.hinta());
+    }
+
+    @Test
+    public void kahdenSamanTuotteenLisaamisenJalkeenKorissaKaksiTuotetta() {
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(maito);
+
+        assertEquals(2, kori.tavaroitaKorissa());
     }
 }
