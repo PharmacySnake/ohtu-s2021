@@ -30,9 +30,25 @@ public class Ostoskori {
 
         return hinta;
     }
- 
+
     public void lisaaTuote(Tuote lisattava) {
         // lisää tuotteen
+        Ostos uusiOstos = new Ostos(lisattava);
+        int index = etsiTuote(uusiOstos);
+        if (index >= 0) {
+            ostoskori.get(index).muutaLukumaaraa(1);
+        } else {
+            ostoskori.add(uusiOstos);
+        }
+    }
+
+    private int etsiTuote(Ostos uusiOstos) {
+        for (int i = 0; i < ostoskori.size(); i++) {
+            if (ostoskori.get(i).hashCode() == uusiOstos.hashCode()) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public void poista(Tuote poistettava) {
