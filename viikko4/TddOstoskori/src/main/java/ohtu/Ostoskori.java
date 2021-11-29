@@ -53,6 +53,15 @@ public class Ostoskori {
 
     public void poista(Tuote poistettava) {
         // poistaa tuotteen
+        Ostos poistettavaOstos = new Ostos(poistettava);
+        int index = etsiTuote(poistettavaOstos);
+        if (index >= 0) {
+            if (ostoskori.get(index).lukumaara() > 1) {
+                ostoskori.get(index).muutaLukumaaraa(-1);
+            } else {
+                ostoskori.remove(index);
+            }
+        }
     }
 
     public List<Ostos> ostokset() {

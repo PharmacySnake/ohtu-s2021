@@ -120,4 +120,17 @@ public class OstoskoriTest {
         assertEquals("maito", ostos.tuotteenNimi());
         assertEquals(2, ostos.lukumaara());
     }
+
+    @Test
+    public void korissaKaksiSamaaTuotettaJaToinenPoistetaanPalautuuOikeaMaara() {
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(maito);
+
+        Ostos o = kori.ostokset().get(0);
+        assertEquals(2, o.lukumaara());
+
+        kori.poista(maito);
+
+        assertEquals(1, o.lukumaara());
+    }
 }
