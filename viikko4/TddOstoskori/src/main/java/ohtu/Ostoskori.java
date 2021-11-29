@@ -54,10 +54,10 @@ public class Ostoskori {
     public void poista(Tuote poistettava) {
         // poistaa tuotteen
     }
- 
+
     public List<Ostos> ostokset() {
         // palauttaa listan jossa on korissa olevat ostokset
-        return null;
+        return ostoskori;
     }
  
     public void tyhjenna() {
