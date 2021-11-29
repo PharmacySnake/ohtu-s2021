@@ -34,32 +34,23 @@ public class Ostoskori {
     public void lisaaTuote(Tuote lisattava) {
         // lisää tuotteen
         Ostos uusiOstos = new Ostos(lisattava);
-        int index = etsiTuote(uusiOstos);
-        if (index >= 0) {
-            ostoskori.get(index).muutaLukumaaraa(1);
+        if (ostoskori.contains(uusiOstos)) {
+            int i = ostoskori.indexOf(uusiOstos);
+            ostoskori.get(i).muutaLukumaaraa(1);
         } else {
             ostoskori.add(uusiOstos);
         }
     }
 
-    private int etsiTuote(Ostos uusiOstos) {
-        for (int i = 0; i < ostoskori.size(); i++) {
-            if (ostoskori.get(i).hashCode() == uusiOstos.hashCode()) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
     public void poista(Tuote poistettava) {
         // poistaa tuotteen
         Ostos poistettavaOstos = new Ostos(poistettava);
-        int index = etsiTuote(poistettavaOstos);
-        if (index >= 0) {
-            if (ostoskori.get(index).lukumaara() > 1) {
-                ostoskori.get(index).muutaLukumaaraa(-1);
+        if (ostoskori.contains(poistettavaOstos)) {
+            int i = ostoskori.indexOf(poistettavaOstos);
+            if (ostoskori.get(i).lukumaara() > 1) {
+                ostoskori.get(i).muutaLukumaaraa(-1);
             } else {
-                ostoskori.remove(index);
+                ostoskori.remove(i);
             }
         }
     }
