@@ -99,4 +99,14 @@ public class OstoskoriTest {
 
         assertEquals(2, kori.tavaroitaKorissa());
     }
+
+    @Test
+    public void kahdenSamanTuotteenLisaamisenJalkeenKorissaYksiOstosOlioJoitaOikeaMaara() {
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(maito);
+
+        Ostos ostos = kori.ostokset().get(0);
+
+        assertEquals(2, ostos.lukumaara());
+    }
 }
