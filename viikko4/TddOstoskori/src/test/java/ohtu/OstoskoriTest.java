@@ -19,7 +19,7 @@ public class OstoskoriTest {
 
     // step 1
     @Test
-    public void ostoskorinHintaJaTavaroidenMaaraAlussa() { 
+    public void ostoskorinHintaJaTavaroidenMaaraAlussa() {
         assertEquals(0, kori.hinta());
         assertEquals(0, kori.tavaroitaKorissa());
         // ...
@@ -47,11 +47,12 @@ public class OstoskoriTest {
         assertEquals(2, kori.tavaroitaKorissa());
     }
 
+    @Test
     public void kahdenTuotteenLisaamisenJalkeenHintaOnSamaKuinKahdenTuotteenHintaYhteensa() {
         kori.lisaaTuote(maito);
         kori.lisaaTuote(mehu);
 
-        assertEquals((maito.getHinta()+mehu.getHinta()), kori.hinta());
+        assertEquals((maito.getHinta() + mehu.getHinta()), kori.hinta());
     }
 
     @Test
@@ -62,10 +63,18 @@ public class OstoskoriTest {
         assertEquals(2, kori.tavaroitaKorissa());
     }
 
+    @Test
     public void kahdenSamanTuotteenLisaamisenJalkeenHintaOnSamaKuinKaksiKertaaTuotteenHinta() {
         kori.lisaaTuote(maito);
         kori.lisaaTuote(maito);
 
-        assertEquals((maito.getHinta()*2), kori.hinta());
+        assertEquals((maito.getHinta() * 2), kori.hinta());
+    }
+
+    @Test
+    public void yhdenTuotteenLisaamisenJalkeenPalautetaanOikeaMaaraTuotteita() {
+        kori.lisaaTuote(mehu);
+
+        assertEquals(1, kori.tavaroitaKorissa());
     }
 }
