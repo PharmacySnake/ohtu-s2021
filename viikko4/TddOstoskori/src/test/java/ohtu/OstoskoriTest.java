@@ -105,8 +105,8 @@ public class OstoskoriTest {
         kori.lisaaTuote(maito);
         kori.lisaaTuote(maito);
 
-        Ostos ostos = kori.ostokset().get(0);
+        int ostoksia = kori.ostokset().size();
 
-        assertEquals(2, ostos.lukumaara());
+        assertEquals(1, ostoksia);
     }
 }
