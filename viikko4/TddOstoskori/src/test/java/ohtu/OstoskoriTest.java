@@ -133,4 +133,15 @@ public class OstoskoriTest {
 
         assertEquals(1, o.lukumaara());
     }
+
+    @Test
+    public void ostoskorinTyhjennys() {
+        kori.lisaaTuote(mehu);
+
+        assertEquals(1, kori.tavaroitaKorissa());
+
+        kori.tyhjenna();
+
+        assertEquals(0, kori.tavaroitaKorissa());
+    }
 }
