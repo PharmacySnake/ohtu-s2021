@@ -91,4 +91,12 @@ public class OstoskoriTest {
         assertEquals("maito", ostos.tuotteenNimi());
         assertEquals(1, ostos.lukumaara());
     }
+
+    @Test
+    public void kahdenEriTuotteenLisaamisenJalkeenOstoskorissaKaksiOstosta() {
+        kori.lisaaTuote(maito);
+        kori.lisaaTuote(mehu);
+
+        assertEquals(2, kori.tavaroitaKorissa());
+    }
 }
