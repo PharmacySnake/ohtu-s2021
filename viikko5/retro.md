@@ -1,0 +1,9 @@
+Retrospektiivitekniikat
+
+Start, Stop, Continue, More of, Less of Wheel
+Menetelmälle annetun kuvauksen perusteella tämä on nopeatempoinen sprintin läpikäynti. Taululle on piirretty kehä, joka on jaettu lohkoihin: start, stop, continue, more of, less of. Jokaiselle retrospektiiviin osallistuvalle annetaan mahdollisuus ilmaista asioita, joilla on ollut positiivinen tai negatiivinen vaikutus sprinttiin. Nämä asiat sitten lisätään kontekstia vastaavaan lohkoon kehällä. Lopuksi retrospektiiviin osallistuneet kommentoivat lohkoihin lisättyjä ajatuksia.
+
+Glad, Sad, Mad
+Retrospektiiviin osallistuneet kirjoittavat lapuille mietteitään ja havaintojaan edeltävästä sprintistä. Seuraavaksi jokainen lisää lappunsa taululle paikkaan joka kuvastaa lapun tekstin aiheuttamaa tunnetilaa, glad, sad tai mad. Kun kaikki ovat osallistujat on käyty läpi, toisiaan sisällöltään vastaavat laput kerätään yhteen. Tämän jälkeen äänestetään lappujen aiheet tärkeysjärjestykseen, jonka jälkeen aiheista keskustellaan tärkeimmästä vähiten tärkeimpään, niin pitkään kuin aikaa riittää. 
+
+Mielestäni Glad, Sad, Mad menetelmä keskittyy pitkälti negatiivisiin asioihin, eikä esimerkiksi ollenkaan neutraaleihin asioihin. Asioiden käsittely jatkuvasti ääripäinä ilman nyansseja on epämääräistä ja saattaa tämän takia vaikeuttaa positiivisten, negatiivisten ja neutraalien asioiden kommunikointia. Start, Stop, Continue, More of, Less of menetelmä vaikuttaa järkevämmältä tarjottujen aivainsanojensa perusteella. Epäilen kuitenkin suuresti tähän menetelmään esitettyä suoritusaikaa. 10-25 minuuttia kokonaisuudessaan on hyvin lyhyt aika, jos siihen sisällytetään myös kommentit. Onneksi erilaisia vaihtoehtoja retrospektiivien suorittamiseen on useita, jotta jokainen tiimi voi löytää itselleen sopivimman menetelmän ilmaista hyvät, pahat ja ne muut tuntemukset sprintistä.
